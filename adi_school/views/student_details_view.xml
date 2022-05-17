@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="student_form_view" model="ir.ui.view">
+        <field name="name">student.form.view</field>
+        <field name="model">student.details</field>
+        <field name="arch" type="xml">
+
+            <form>
+<!--            <header>-->
+<!--                    <button name="create_school" string="Create Student" type="object"/>-->
+<!--                </header>-->
+                <sheet>
+                    <group>
+                        <field name="student_name"/>
+                        <field name="student_email"/>
+                        <field name="student_phone"/>
+                        <field name="student_address"/>
+                        <field name="student_school_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="student_tree_view" model="ir.ui.view">
+        <field name="name">student.tree.view</field>
+        <field name="model">student.details</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="student_name"/>
+                <field name="student_email"/>
+                <field name="student_phone"/>
+                <field name="student_address"/>
+                <field name="student_school_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="student_action" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">student.details</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first Ward
+            </p>
+        </field>
+    </record>
+    <menuitem id="student_details"
+              name="Students"
+              parent="school_root_menu"
+              action="student_action"
+              sequence='10'/>
+</odoo>

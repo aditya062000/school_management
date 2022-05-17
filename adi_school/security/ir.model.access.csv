@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+school_profile,school.profile,model_school_profile,base.group_user,1,1,1,1
+student_info_line,student.info.line,model_student_info_line,base.group_user,1,1,1,1
+student_details,student.details,model_student_details,base.group_user,1,1,1,1
